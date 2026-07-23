@@ -1,14 +1,15 @@
 # Employee Management App
-     A simple full-stack web application built with Flask and SQLite to manage employee records. Supports full CRUD operations (Create, Read, Update, Delete) through a clean, form-based interface.
+
+     A simple full-stack web application built with Flask and SQLite to manage employee records. Supports full CRUB operations (Create, Read, Update, Delete) through a clean, form-based interface.
 
 ## Features
 
-- **View all employees** — displays employee ID, name, department, and salary in a table
-- **Add a new employee** — form-based entry with name, department, and salary
-- **Update employee salary** — inline editing directly from the employee list
-- **Delete an employee** — remove a record with a single click
+- **View all employees** - displays employee ID, name, department, and salary in a table
+- **Add a new employee** - form-based entry with name, department, and salary
+- **Update employee salary** - inline editing directly from the employee list
+- **Delete an employee** - remove a record with a single click
 - Success/confirmation messages after each action (add, update, delete)
-- Persistent storage using SQLite — data survives server restarts
+- Persistent storage using SQLite - data survives server restarts
 
 ## Tech Stack
 
@@ -42,4 +43,5 @@
 5. **Open your browser** and visit: http://127.0.0.1:5000/employees
 
 ## What I Learned
-    This project was built while learning Flask fundamentals — routing, HTTP methods (GET/POST), Jinja2 templating, form handling, and connecting Flask to a SQLite database for persistent CRUD operations.
+
+     This project was built while learning Flask fundamentals - routing, HTTP methods (GET/POST), Jinja2 templating, form handling and connecting Flask to a SQLite database for persistent CRUB operations.
