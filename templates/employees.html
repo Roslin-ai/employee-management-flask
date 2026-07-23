@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><title>Employees</title></head>
+<body>
+    <h1>Employee List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.department }}</td>
+            <td>{{ emp.salary }}</td>
+            <td>
+    <form method="post" action="/delete_employee/{{ emp.id }}" style="display:inline;">
+        <button type="submit">Delete</button>
+    </form>
+    <form method="post" action="/update_employee/{{ emp.id }}" style="display: inline;">
+        <input type="number" name="new_salary" value="{{ emp.salary }}">
+        <button type="submit">Update</button>
+    </form></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form method="post" action="/add_employee">
+        <input type="text" name = "emp_name" placeholder="Name">
+        <input type="text" name = "emp_department" placeholder="Department">
+        <input type="text" name = "emp_salary" placeholder="Salary">
+        <button type="submit">ADD EMPLOYEE</button>
+    </form>
+    {% if success %}
+    <p style="color: green;">Employee added successfully!</p>
+{% endif %}
+    {% if deleted %}
+    <p style="color: red;">Employee deleted successfully!</p>
+{% endif %}
+    {% if updated %}
+    <p style="color: darkgreen;">Employee Updated Successfully!</p>
+{% endif %}
+</body>
+</html>
